@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<resources>
+    <string name="app_name">My Clinic</string>
+
+    <string name="username">Username</string>
+    <string name="email">Email Address</string>
+    <string name="password">Password</string>
+    <string name="full_name">Full Name</string>
+    <string name="phone">Phone Number</string>
+    <string name="logout">Logout</string>
+    <string name="edit_profile">Edit Profile</string>
+    <string name="register">Register</string>
+    <string name="login">Log In</string>
+    <string name="forgot_password">Forgot Password?</string>
+    <string name="go_register">Don’t have an account? Register</string>
+    <string name="start">start</string>
+
+    <string name="profile_picture">User Profile Picture</string>
+    <string name="my_medical_records">My Medical Records</string>
+    <string name="my_appointments">My Appointments</string>
+    <string name="browse_doctors">Browse Doctors</string>
+
+    <string name="doctor_name_placeholder">Doctor Name</string>
+    <string name="specialty_placeholder">Specialty</string>
+    <string name="date_placeholder">Date</string>
+    <string name="time_placeholder">Time</string>
+    <string name="doctor_name">Dr. John Doe</string>
+    <string name="doctor_specialty">General</string>
+
+    <string name="status_pending">Pending</string>
+    <string name="status_completed">Completed</string>
+    <string name="status_cancelled">Cancelled</string>
+
+    <string name="btn_cancel">Cancel</string>
+    <string name="light_mode">Light Mode</string>
+    <string name="dark_mode">Dark Mode</string>
+</resources>
