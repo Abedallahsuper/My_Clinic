@@ -1,8 +1,6 @@
 package com.example.myclinic.activities;
 
-import android.app.NotificationChannel;
-import android.app.NotificationManager;
-import android.os.Build;
+import android.content.Intent;
 import android.os.Bundle;
 import android.view.MenuItem;
 
@@ -10,12 +8,14 @@ import androidx.annotation.NonNull;
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.fragment.app.Fragment;
 
+import com.example.myclinic.MapsActivity;
 import com.example.myclinic.R;
 import com.example.myclinic.fragments.AppointmentsFragment;
 import com.example.myclinic.fragments.BrowseDoctorsFragment;
 import com.example.myclinic.fragments.MedicalRecordsFragment;
 import com.example.myclinic.fragments.ProfileFragment;
 import com.google.android.material.bottomnavigation.BottomNavigationView;
+import com.google.android.material.floatingactionbutton.FloatingActionButton;
 import com.google.android.material.navigation.NavigationBarView;
 
 public class MainActivity extends AppCompatActivity {
@@ -27,9 +27,14 @@ public class MainActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
 
-        createNotificationChannel();
-
         bottomNavigationView = findViewById(R.id.bottomNavigation);
+        FloatingActionButton fabOpenMap = findViewById(R.id.fab_open_map);
+
+        // فتح الخريطة عند الضغط على FAB
+        fabOpenMap.setOnClickListener(v -> {
+            Intent intent = new Intent(MainActivity.this, MapsActivity.class);
+            startActivity(intent);
+        });
 
         loadFragment(new BrowseDoctorsFragment());
 
@@ -57,20 +62,6 @@ public class MainActivity extends AppCompatActivity {
         });
     }
 
-    private void createNotificationChannel() {
-        if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.O) {
-            CharSequence name = "ClinicChannel";
-            String description = "Notifications for clinic app";
-            int importance = NotificationManager.IMPORTANCE_DEFAULT;
-
-            NotificationChannel channel = new NotificationChannel("clinic_channel_id", name, importance);
-            channel.setDescription(description);
-
-            NotificationManager notificationManager = getSystemService(NotificationManager.class);
-            notificationManager.createNotificationChannel(channel);
-        }
-    }
-
     private void loadFragment(Fragment fragment) {
         getSupportFragmentManager()
                 .beginTransaction()
@@ -78,3 +69,4 @@ public class MainActivity extends AppCompatActivity {
                 .commit();
     }
 }
+

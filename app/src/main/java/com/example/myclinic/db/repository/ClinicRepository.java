@@ -61,11 +61,11 @@ public class ClinicRepository {
     public void insertDummyRecords(int userId) {
         executor.execute(() -> {
             List<MedicalRecord> existing = recordDao.getRecordsForUserSync(userId);
-            if(existing == null || existing.isEmpty()) {
-                recordDao.insert(new MedicalRecord(userId, "تشخيص عام", new Date(), "ملاحظات أولية"));
-                recordDao.insert(new MedicalRecord(userId, "فحص أسنان", new Date(), "ملاحظات الأسنان"));
-                recordDao.insert(new MedicalRecord(userId, "فحص الجلد", new Date(), "ملاحظات الجلدية"));
+            if (existing == null || existing.isEmpty()) {
+                recordDao.insert(new MedicalRecord(userId, "General Diagnosis", new Date(), "Initial Notes"));
+                recordDao.insert(new MedicalRecord(userId, "Dental Checkup", new Date(), "Dental Notes"));
+                recordDao.insert(new MedicalRecord(userId, "Skin Checkup", new Date(), "Dermatology Notes"));
             }
         });
-    }
-}
+
+    } }

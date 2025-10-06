@@ -1,40 +1,32 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
     <string name="app_name">عيادتي</string>
-
     <string name="username">اسم المستخدم</string>
-    <string name="email">البريد الإلكتروني</string>
+    <string name="email">عنوان الايميل</string>
     <string name="password">كلمة المرور</string>
     <string name="full_name">الاسم الكامل</string>
     <string name="phone">رقم الهاتف</string>
-    <string name="logout">تسجيل الخروج</string>
+    <string name="logout">خروج</string>
     <string name="edit_profile">تعديل الملف الشخصي</string>
     <string name="register">تسجيل</string>
-    <string name="login">تسجيل الدخول</string>
-    <string name="forgot_password">هل نسيت كلمة المرور؟</string>
-    <string name="go_register">ليس لديك حساب؟ أنشئ حساب</string>
-    <string name="start">ابدا</string>
-
-    <string name="profile_picture">صورة الملف الشخصي</string>
-    <string name="my_medical_records">سجلاتي الطبية</string>
+    <string name="login">دخول</string>
+    <string name="forgot_password">نسيت كلمة المرور</string>
+    <string name="go_register">ليس لديك حساب ؟ قم بالتسجيل الان</string>
+    <string name="start">ابدأ</string>
+    <string name="profile_picture">صورة الملف المستخدم</string>
+    <string name="my_medical_records">سجلاتي الطبيه</string>
     <string name="my_appointments">مواعيدي</string>
-    <string name="browse_doctors">تصفح الأطباء</string>
-
+    <string name="browse_doctors">تصفح الاطباء</string>
     <string name="doctor_name_placeholder">اسم الطبيب</string>
     <string name="specialty_placeholder">التخصص</string>
     <string name="date_placeholder">التاريخ</string>
     <string name="time_placeholder">الوقت</string>
-    <string name="doctor_name">د. محمد أحمد</string>
+    <string name="doctor_name">دكتور جون</string>
     <string name="doctor_specialty">عام</string>
-
-    <string name="status_pending">قيد الانتظار</string>
+    <string name="status_pending">الطلب معلق</string>
     <string name="status_completed">مكتمل</string>
     <string name="status_cancelled">ملغي</string>
-
-    <string name="btn_cancel">إلغاء</string>
+    <string name="btn_cancel">الغاء</string>
     <string name="light_mode">الوضع الفاتح</string>
     <string name="dark_mode">الوضع الداكن</string>
 </resources>
-
-
-

@@ -23,11 +23,11 @@ import java.util.concurrent.Executors;
 
 @Database(
         entities = {User.class, Doctor.class, Appointment.class, MedicalRecord.class},
-        version = 3,
+        version = 6,
         exportSchema = false
 )
 
-@TypeConverters({Converter.class}) //
+@TypeConverters({Converter.class})
 public abstract class AppDatabase extends RoomDatabase {
 
     private static AppDatabase instance;
@@ -50,9 +50,9 @@ public abstract class AppDatabase extends RoomDatabase {
                             Executors.newSingleThreadExecutor().execute(() -> {
                                 DoctorDao doctorDao = instance.doctorDao();
                                 doctorDao.insert(new Doctor("Dr. Ahmed", "General", "Experienced general doctor", "", 4.5f));
-                                doctorDao.insert(new Doctor("Dr. Sara", "Dental", "Specialist in dental care", "", 4.7f));
-                                doctorDao.insert(new Doctor("Dr. Ali", "Dermatology", "Skin care specialist", "", 4.6f));
-                                doctorDao.insert(new Doctor("Dr. Lina", "Pediatrics", "Child specialist doctor", "", 4.8f));
+                                doctorDao.insert(new Doctor("Dr. Eman", "Dental", "Specialist in dental care", "", 4.7f));
+                                doctorDao.insert(new Doctor("Dr. Abedallah", "Dermatology", "Skin care specialist", "", 4.6f));
+                                doctorDao.insert(new Doctor("Dr. Mona", "Pediatrics", "Child specialist doctor", "", 4.8f));
                             });
                         }
                     })
