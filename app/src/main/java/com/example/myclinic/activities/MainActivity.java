@@ -18,6 +18,7 @@ import com.google.android.material.bottomnavigation.BottomNavigationView;
 import com.google.android.material.floatingactionbutton.FloatingActionButton;
 import com.google.android.material.navigation.NavigationBarView;
 
+// Marked by Mahmoud
 public class MainActivity extends AppCompatActivity {
 
     private BottomNavigationView bottomNavigationView;
